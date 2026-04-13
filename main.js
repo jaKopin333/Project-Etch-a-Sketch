@@ -8,7 +8,7 @@ function Grids(size){
         square.style.height = squareSize + 'px';
         square.className = 'square';
         square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = 'black'; //Changes color on hover 
+            square.style.backgroundColor = 'darkblue'; //Changes color on hover 
         });
         container.appendChild(square);
     }
