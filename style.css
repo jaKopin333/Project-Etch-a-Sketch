@@ -7,9 +7,8 @@ body{
 }
 
 #gridContainer {
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     width: 800px;
     height: 800px;
     border: 2px solid #333;
@@ -21,8 +20,4 @@ body{
     background-color: white;
     box-sizing: border-box;
     transition: background-color 0.3s;
-}
-
-.square:hover {
-    background-color: #f0f0f0;
 }
