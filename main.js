@@ -7,9 +7,21 @@ function Grids(size){
         square.style.width = squareSize + 'px';
         square.style.height = squareSize + 'px';
         square.className = 'square';
-        square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = 'darkblue'; //Changes color on hover 
-        });
+        //square.addEventListener('mouseover', () => {
+            function getRandomColor () {
+                return 'rgb(' + Math.floor(Math.random() * 256) + ',' +
+                Math.floor(Math.random() * 256) + ',' +
+                Math.floor(Math.random() * 256) + ')';
+        }
+
+        square.onmouseover = function() {
+            square.style.backgroundColor = getRandomColor(); //Changes color on hover
+        };
+
+        square.onmouseout = function() {
+            square.style.backgroundColor = 'Black';
+        };
+    
         container.appendChild(square);
     }
 }
